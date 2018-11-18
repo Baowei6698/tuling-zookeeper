@@ -5,10 +5,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.jiagouedu</groupId>
-  <artifactId>zookeeper02</artifactId>
+  <artifactId>tuling-zk-service</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>zk-service-register</module>
+    <module>zk-service-provider</module>
+    <module>zk-service-consumer</module>
+    <module>zk-service-admin</module>
+  </modules>
 
-  <name>zookeeper02</name>
+  <name>tuling-zk-service</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -20,10 +27,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.32</version>
     </dependency>
     <dependency>
       <groupId>org.apache.zookeeper</groupId>
@@ -31,9 +37,10 @@
       <version>3.4.9</version>
     </dependency>
     <dependency>
-      <groupId>com.101tec</groupId>
-      <artifactId>zkclient</artifactId>
-      <version>0.10</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 

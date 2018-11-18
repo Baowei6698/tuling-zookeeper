@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.jiagouedu</groupId>
-  <artifactId>zookeeper02</artifactId>
+  <artifactId>zookeeper03</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>zookeeper02</name>
+  <name>zookeeper03</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -16,6 +16,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <slf4j.version>1.6.1</slf4j.version>
+    <logback.version>1.1.2</logback.version>
   </properties>
 
   <dependencies>
@@ -31,9 +33,31 @@
       <version>3.4.9</version>
     </dependency>
     <dependency>
-      <groupId>com.101tec</groupId>
-      <artifactId>zkclient</artifactId>
-      <version>0.10</version>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-client</artifactId>
+      <version>4.0.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>zookeeper</artifactId>
+          <groupId>org.apache.zookeeper</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-recipes</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-framework</artifactId>
+      <version>4.0.0</version>
     </dependency>
   </dependencies>
 
