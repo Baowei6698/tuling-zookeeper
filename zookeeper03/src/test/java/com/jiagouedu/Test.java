@@ -22,8 +22,8 @@ import com.jiagouedu.curator.CuratorCrud;
 public class Test {
    public static void main(String[] args) {
       CuratorCrud zkClientCrud=new CuratorCrud();
-      zkClientCrud.createPersistent("/wukong/abc","abc");
-      System.out.println(zkClientCrud.getData("/wukong/abc/ccc/d/d/daew/ew/ewew/"));;
+      zkClientCrud.createPersistent("/wukong/a/b","abc");
+      System.out.println(zkClientCrud.getData("/wukong/a/b"));;
 
 
    }

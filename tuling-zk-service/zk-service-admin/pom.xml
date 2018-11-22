@@ -44,7 +44,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${spring-framework.version}</version>
+            <version>4.3.10.RELEASE</version>
         </dependency>
 
         <!-- Other Web dependencies -->
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>${spring-framework.version}</version>
+            <version>4.3.10.RELEASE</version>
         </dependency>
 
         <!-- Logging with SLF4J & LogBack -->
@@ -91,7 +91,7 @@
             <artifactId>zk-service-register</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>C:/zk-service-register-1.0-SNAPSHOT.jar</systemPath>
+            <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/zk-service-register-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -100,7 +100,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.2.2.v20140723</version>
+                <version>9.2.7.v20150116</version>
                 <configuration>
                     <httpConnector>
                         <port>9091</port>

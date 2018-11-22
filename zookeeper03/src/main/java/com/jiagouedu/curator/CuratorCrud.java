@@ -23,11 +23,11 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 
 public class CuratorCrud {
-   private final String connectString = "192.168.0.31:2181,192.168.0.32:2181,192.168.0.33:2181";
+   private String connectString = "172.26.113.131:2181,172.26.113.129:2181,172.26.113.130:2181";
    CuratorFramework cf ;
    public CuratorCrud() {
       //1 重试策略：初试时间为1s 重试10次
-      RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 10);
+      RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000000, 10);
       //2 通过工厂创建连接
       cf = CuratorFrameworkFactory.builder()
               .connectString(connectString)

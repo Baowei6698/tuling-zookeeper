@@ -22,8 +22,6 @@ import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 
-import java.util.concurrent.locks.ReentrantLock;
-
 public class CuratorLockTest implements  Runnable{
 
     final  static CuratorFramework client= CuratorFrameworkFactory.builder().connectString("192.168.0.31:2181,192.168.0.32:2181,192.168.0.33:2181").retryPolicy(new ExponentialBackoffRetry(100,1)).build();

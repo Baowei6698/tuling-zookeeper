@@ -27,7 +27,7 @@ import java.util.List;
 
 public class ZkClientWatcher<T> {
    ZkClient zkClient;
-   private String connectString="192.168.0.31:2181,192.168.0.32:2181,192.168.0.33:2181";
+   private String connectString = "172.26.113.131:2181,172.26.113.129:2181,172.26.113.130:2181";
    public ZkClientWatcher() {
       this.zkClient = new ZkClient(connectString,5000,5000,new SerializableSerializer());
    }

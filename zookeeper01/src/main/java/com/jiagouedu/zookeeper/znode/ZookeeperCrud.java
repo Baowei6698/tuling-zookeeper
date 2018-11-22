@@ -22,7 +22,7 @@ import org.apache.zookeeper.data.Stat;
 import java.io.IOException;
 
 public class ZookeeperCrud {
-   private String connectString="192.168.0.31:2181,192.168.0.32:2181,192.168.0.33:2181";
+   private String connectString = "172.26.113.131:2181,172.26.113.129:2181,172.26.113.130:2181";
 
    private ZooKeeper zookeeper;
 
